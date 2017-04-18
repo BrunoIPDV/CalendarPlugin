@@ -15,7 +15,7 @@ public class Calendar extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
       try {
-          if(Settings.Global.getInt(getContentResolver(), Global.AUTO_TIME) == 1)
+          if(Settings.Global.getInt(getContentResolver(), Global.AUTO_TIME) == 1){
             if (ACTION_ADD_CALENDAR_ENTRY.equals(action)) { 
                 JSONObject arg_object = args.getJSONObject(0);
                 Intent calIntent = new Intent(Intent.ACTION_EDIT)
